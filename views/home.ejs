@@ -1,0 +1,105 @@
+<!-- <%- include("partials/header"); -%>
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+      <a href="/login">Login</a>
+      <a href="/signup">signup</a>
+
+<%- include("partials/footer"); -%> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-form input[type="text"] {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+}
+
+.search-form button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #555;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  padding: 5px;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">My Blog</div>
+      <form class="search-form" action="/posts/64229000d39c2c29453021c3" method="get">
+        <input type="text" name="q" placeholder="Search">
+        <button type="submit">Search</button>
+      </form>      
+      <nav>
+        <ul>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Home</h1>
+      <p><%= startingContent %></p>
+    </main>
+    <footer class="footer  footer-padding">
+      <p>Copyright © 2023 My Blog</p>
+    </footer>
+  </body>
+</html>
